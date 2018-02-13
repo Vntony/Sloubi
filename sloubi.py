@@ -1,7 +1,9 @@
 # -*-coding:utf-8 -*
 
-import time, sys
+import time, sys, os
 from random import randrange
+
+os.system('clear')
 
 print("Bienvenue dans la taverne, messire, et rejoignez-nous pour une partie de Sloubi !")
 pm = 100
@@ -18,7 +20,7 @@ while pm >= 1:
             print("Il faut jouer selon les règles, alors respectez, arrêtez de nous souffler dans les narines et misez une vraie somme ! ")
         else:
             pm = int(pm) - int(tune)
-            print(int(pm))
+            print("Solde de votre porte-monnaie: %s $" %(pm))
             print("Super, maintenant vous devez lancer votre dé à 7 faces (bah ouais, on a trouvé un dé avec une face égale à 0, comme on n'avait plus de poutres de 8 pieds...)")
             dj = randrange(7)
 
@@ -46,17 +48,62 @@ while pm >= 1:
                        6 : burgonde,
             }
             adv = options[randrange(7)]()
-            print("Voici votre adversaire pour cette partie...")
-            
+            print("Voici votre adversaire pour cette manche...")
+            time.sleep(2)
             #boucle pour afficher un message ou photo précis en fonction de l'adversaire
             if adv == options[0]():
-                print("")
-            else:
-                print("CACAAAAAAAAAAAAAAAAAA")
+                os.system("gvfs-open 'https://www.demotivateur.fr/images-buzz/4771/7d70499bb048568c5dzd6d12d5b89aafbb6.jpg'")
+                time.sleep(1)
+                os.system('clear')
+                print("Bah... ouais, c'est pas faux !")
+            elif adv == options[1]():
+                os.system("gvfs-open 'http://shared.frenys.com/assets/160917536988/6036879-C-est-pas-si-simple-Leodagan.jpg'")    
+                time.sleep(1)
+                os.system('clear')
+                print("Vous avez intérêt à marcher droit ou vous j'vous promets que vous allez voir du pays !")
+            elif adv == options[2]():
+                os.system("gvfs-open 'http://www.geek-powa.fr/wp-content/uploads/2015/12/ob_096604_gdwe51vl.jpg'")    
+                time.sleep(1)
+                os.system('clear')
+                print("Moi j'réponds 'Merde'. En principe, ça colle avec tout.")
+            elif adv == options[3]():
+                os.system("gvfs-open 'http://img0.gtsstatic.com/serie/karadoc_174552_w620.jpg'")    
+                time.sleep(1)
+                os.system('clear')
+                print("Y'a rien à développer, c'est d'la merde !")
+            elif adv == options[4]():
+                os.system("gvfs-open 'https://78.media.tumblr.com/2bd7a1da4fdcb83b0ea614f941bf50f7/tumblr_mtwd7pKwzB1sjm11ro1_250.gif'")    
+                time.sleep(1)
+                os.system('clear')
+                print("En garde, ma mignonne !")
+            elif adv == options[5]():
+                os.system("gvfs-open 'http://www.moyenagepassion.com/wp-content/uploads/2017/01/kaamelott_merlin_enchanteur_humour_medieval_serie_televisee_culte_legende_arthur_graal_alexandrin1.jpg'")    
+                time.sleep(1)
+                os.system('clear')
+                print("Qu'est-ce qui est petit et marron ?")
+            elif adv == options[6]():
+                os.system("gvfs-open 'https://s1-ssl.dmcdn.net/gJ8gv/1280x720-E9S.jpg'")
+                time.sleep(1)
+                os.system('clear')
+                print("Qu'est-ce à dire que ceci ?!")
+            time.sleep(5)
+            for i in range(1,4):
+                os.system('clear')
+                print("Vous priez le Graal")
+                time.sleep(0.5)    
+                os.system('clear')
+                print("Vous priez le Graal.")
+                time.sleep(0.5)
+                os.system('clear')
+                print("Vous priez le Graal..")
+                time.sleep(0.5)
+                os.system('clear')
+                print("Vous priez le Graal...")
+                time.sleep(1.5)
 
             #début de la partie
             print("Vous avez sorti un %s," %(dj) + " et votre adversaire, %s" %(adv) + ", va lancer son dé.")
-            time.sleep(8.5)
+            time.sleep(2.5) #mettre 5
             for i in range(1, 8):
                 print("*roll roll roll roll*")
                 time.sleep(0.4)
