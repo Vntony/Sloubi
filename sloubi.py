@@ -10,6 +10,7 @@ pm = 100
 print("Dans votre bourse, vous avez %s $. Ne gaspillez pas tout (ou devenez riche. Ou bossez, mais faites un truc.)" %(pm))
 
 while pm >= 1:
+    print("Solde de votre porte-monnaie: %s $" %(pm))
     tune = input("Combien voulez-vous miser ?" + "\n")
     try:
         tune == int(tune)
@@ -60,12 +61,12 @@ while pm >= 1:
                 os.system("gvfs-open 'http://shared.frenys.com/assets/160917536988/6036879-C-est-pas-si-simple-Leodagan.jpg'")    
                 time.sleep(1)
                 os.system('clear')
-                print("Vous avez intérêt à marcher droit ou vous j'vous promets que vous allez voir du pays !")
+                print("Moi j'réponds 'Merde'. En principe, ça colle avec tout.")
             elif adv == options[2]():
                 os.system("gvfs-open 'http://www.geek-powa.fr/wp-content/uploads/2015/12/ob_096604_gdwe51vl.jpg'")    
                 time.sleep(1)
                 os.system('clear')
-                print("Moi j'réponds 'Merde'. En principe, ça colle avec tout.")
+                print("Vous avez intérêt à marcher droit ou vous j'vous promets que vous allez voir du pays !")
             elif adv == options[3]():
                 os.system("gvfs-open 'http://img0.gtsstatic.com/serie/karadoc_174552_w620.jpg'")    
                 time.sleep(1)
@@ -127,6 +128,26 @@ while pm >= 1:
                         print("Okay !")
                         time.sleep(0.4)
                         print("Tavernier, une mousse pour ce brave personnage, on continue la partie !")
+                        papa = "z"
+                        while papa != "a" and papa != "b" and papa != "c" and papa != "d" and papa != "e" and papa != "f":
+                            papa = input("Vous avez plus que 5 solutions possibles. Laquelle choisissez-vous ? " + "\n" + "a) Compter" + "\n" + "b) Diviser par 6 le total des dés" + "\n" + "c) Jouer sans atout" + "\n" + "d) Attrape oiseau" + "\n" + "e) Faire 20 jets de dés" + "\n" + "f) Chante Sloubi (conseillé)" + "\n")
+                            if papa == "a":
+                                print("Vous avez %s points grâce à votre jet de dé." %(dj))
+                            elif papa == "b":
+                                print("Division par 6 du total des dés.")
+                                ddj == dj / 6 ############################################################## Check
+                                ddadv == dadv / 6
+                                print("Votre nouveau total de point est de %s points " %(ddj) + " et celui de votre adversaire est de %s" %(dadv) + " points")
+                            elif papa == "c":
+                                print("cacc")
+                            elif papa == "d":
+                                print("cacd")
+                            elif papa == "e":
+                                print("cace")
+                            elif papa == "f":
+                                print("cacf")
+                            else:
+                                "Merci d'entrer une vraie valeur"
                     elif rep == "b":
                         print("Parfait, allez plutôt nettoyer les cuvettes de la taverne et laissez les vrais jouer !")
                         sys.exit()
@@ -163,6 +184,19 @@ while pm >= 1:
                         print("Parfait, allez plutôt nettoyer les cuvettes de la taverne et laissez les vrais jouer !")
                         sys.exit()
             
+
+
+
+
+
+
+
+
+
+
+
+
+
 #Plus d'argent ? Fin de la partie !
 else:
     print("Pécore, vous ne pouvez plus jouer et êtes éjecté(e) de la taverne !")
